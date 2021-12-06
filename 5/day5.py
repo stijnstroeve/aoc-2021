@@ -72,15 +72,8 @@ def process_lines_part2(lines):
                 ux = x1 - x2 < 0
                 uy = y1 - y2 < 0
                 
-                if ux:
-                    xa = x1 + x
-                else:
-                    xa = x1 - x
-
-                if uy:
-                    ya = y1 + y
-                else:
-                    ya = y1 - y
+                xa = x1 + x if ux else x1 - x
+                ya = y1 + y if uy else y1 - y
 
                 coords.append((xa, ya))
                 y += 1
