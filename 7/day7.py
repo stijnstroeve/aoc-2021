@@ -21,7 +21,7 @@ def part2():
         sum = 0
         for current_x in input:
             delta = abs(target_x - current_x)
-            triangle_number = int((delta ** 2 + delta) / 2)
+            triangle_number = (delta * (delta + 1)) // 2
             sum += triangle_number
 
         if sum < min_fuel:
